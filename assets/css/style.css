@@ -223,6 +223,21 @@ a {
     gap: 16px;
 }
 
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .timeline-card > div {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+    .timeline-title {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+}
+
 .skill-card {
     display: flex;
     align-items: center;
