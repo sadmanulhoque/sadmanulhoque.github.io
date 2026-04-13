@@ -28,8 +28,8 @@
     --accent-green: #059669; /* Darkened for better contrast */
     --accent-pink: #DB2777; /* Darkened for better contrast */
     --accent-purple: #9333EA; /* Added vibrant purple */
-    --tag-bg: #F3E8FF; /* Light purple background */
-    --tag-text: #7E22CE; /* Dark purple text */
+    --tag-bg: #e0f7ef; /* Light green background */
+    --tag-text: var(--accent-green); /* Green text */
     --nav-bg: #FFFFFF;
 }
 
@@ -234,7 +234,7 @@ a {
 
 .all-link {
     font-size: 0.9rem;
-    color: var(--accent-purple);
+    color: var(--accent-green);
     font-weight: 500;
 }
 .all-link:hover {
@@ -322,7 +322,7 @@ a {
 }
 
 .project-item:hover h3 {
-    color: var(--accent-purple);
+    color: inherit;
 }
 
 .project-item p {
