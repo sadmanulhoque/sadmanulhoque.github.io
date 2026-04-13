@@ -62,7 +62,9 @@ a {
     margin-bottom: 80px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Adds a subtle shadow while scrolling */
 }
-
+.section-title.mt-5 {
+    /* reverted to original, no custom margin */
+}
 .nav-logo {
     display: flex;
     align-items: center;
@@ -158,11 +160,23 @@ a {
     border-radius: 50px;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: background 0.2s, color 0.2s;
+    background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-green) 50%, transparent 50%, transparent 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    color: var(--text-main);
+    transition: background-position 0.4s cubic-bezier(0.4,0,0.2,1), color 0.2s, box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
+
 .btn-primary:hover {
-    background: rgba(255,255,255,0.1);
+    background-position: 0 0;
+    color: #fff;
+    border-color: var(--accent-green);
+    box-shadow: 0 2px 12px rgba(5, 150, 105, 0.15);
+    transform: translateY(-2px) scale(1.03);
 }
 
 .status-indicator {
@@ -194,6 +208,7 @@ a {
     font-weight: 700;
     color: var(--text-muted);
     margin-bottom: 24px;
+    margin-top: 50px;
 }
 
 .mb-0 {
